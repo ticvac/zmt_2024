@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Photo Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2.5rem;
+            color: #222;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 600px;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+            filter: brightness(0.9);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 15px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            font-size: 1rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #fff;
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #1e90ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        iframe {
+            border-radius: 1.5em;
+            align-self: center;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+        }
+
+        .popis {
+            max-width: 600px;
+            text-align: center;
+            font-weight: 700;
+            text-align: justify;
+            margin-bottom: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Cesta orla kolem světa</h1>
+        <div>Václav Tichý, Michal Zumr</div>
+
+        <div class="popis">
+            Projekt "Cesta orla kolem světa" je multimediální zážitek, který kombinuje dechberoucí záběry z dronu, inspirativní hudbu a poutavé mluvené slovo. Naším cílem bylo vytvořit unikátní audiovizuální cestu, která přenese diváky na různá místa na Zemi prostřednictvím pohledu orla v letu. 
+        </div>
+
+        <div>
+            <div><b>Použitý software:</b></div>
+            <ul>
+                <li>Video - Kdenline</li>
+                <li>Zvuk - Audacity</li>
+                <li>Foto - GIMP</li>
+            </ul>
+            <div><b>Pořízení materiálů:</b></div>
+            <ul>
+                <li>Videa a fotografie – dron </li>
+                <li>Mluvené slovo - Záznam zvuku (telefon) </li>
+                <li>Hudba - Půjčil jsem si od Tat'ky </li>
+                <li>Zvuky orla – online knihovna </li>
+            </ul>
+        </div>
+        
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NowWCzlOYOI" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <h2>Zvuk příklad:</h2>
+        <h3>Použité metody v audacity</h3>
+        <ul>
+            <li>nastavení obálek</li>
+            <li>redukce šumu</li>
+            <li>ořezání a posuny zvuku</li>
+            <li>srovnání hlasitosti</li>
+        </ul>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="Snímek obrazovky 2024-11-29 v 14.11.04.png" alt="">
+                <div class="gallery-caption">Nastavení obálky</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Snímek obrazovky 2024-11-29 v 13.42.28.png" alt="">
+                <div class="gallery-caption">Odstraňování šumu</div>
+            </div>
+        </div>
+        
+
+        <h2>Statické obrázky příklad:</h2>
+        <h3>Použité metody v gimpu</h3>
+        <ul>
+            <li>úprava bareb, jasu, kontrastu</li>
+            <li>fotomontáž</li>
+            <li>stíny</li>
+            <li>klíčování</li>
+        </ul>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="vlcsnap-2024-09-01-13h43m11s481.png" alt="">
+                <div class="gallery-caption">Ryba před úpravy</div>
+            </div>
+            <div class="gallery-item">
+                <img src="more-foto-ryba.png" alt="">
+                <div class="gallery-caption">Ryba po úpravách</div>
+            </div>
+        </div>
+
+        <h2>Video příklad:</h2>
+        <h3>Použité metody v kdenlive</h3>
+        <ul>
+            <li>fade in-out</li>
+            <li>výřezy, úpravy</li>
+        </ul>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="Snímek obrazovky 2024-11-29 v 14.27.52.png" alt="">
+                <div class="gallery-caption">Nastavování ořezu a fade in-out</div>
+            </div>
+        </div>
+
+        
+    </div>
+    
+    
+    <footer>
+        ZMT - 2024 - Václav Tichý, Michal Zumr
+    </footer>
+</body>
+
+</html>
